@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+       构造方法注入
+    -->
+    <bean id="myStudent" class="com.bjpowernode.ba02.Student">
+        <constructor-arg name="name" value="刘德华"/>
+        <constructor-arg name="age" value="60"/>
+        <constructor-arg name="school" ref="mySchool"/>
+    </bean>
+    <!--声明School对象-->
+    <bean id="mySchool" class="com.bjpowernode.ba02.School">
+        <property name="name" value="华东理工大学"/>
+        <property name="address" value="华东大食堂"/>
+    </bean>
+
+</beans>
